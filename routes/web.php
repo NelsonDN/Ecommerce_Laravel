@@ -14,15 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('articles');
+    return view('welcome');
 });
 
 Route::get('/hello/{name}', function ($name) {
     return "Bonjour $name !";
-});
-
-Route::get('/posts', function() {
-    return 'liste d\'articles';
 });
 
 Route::get('/postsJson', function() {
@@ -35,3 +31,6 @@ Route::get('/postsJson', function() {
 Route::get('/articles', function(){
     return view('articles');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

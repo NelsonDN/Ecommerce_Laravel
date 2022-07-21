@@ -9,4 +9,4 @@
 <body>
     <h1>LISTE DES ARTICLES</h1>
 </body>
-</html>
+</html> 
